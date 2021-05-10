@@ -5,6 +5,7 @@ require 'yaml'
 PROJECT_ROOT = File.expand_path('../..', __FILE__)
 PULL_REQUEST = File.join(PROJECT_ROOT, 'pull-request')
 STYLE_ROOT = File.directory?(PULL_REQUEST) ? PULL_REQUEST : PROJECT_ROOT
+puts "Loading styles from #{STYLE_ROOT}"
 
 ISSN = Hash.new { |h,k| h[k] = [] }
 TITLES = Hash.new { |h,k| h[k] = [] }
